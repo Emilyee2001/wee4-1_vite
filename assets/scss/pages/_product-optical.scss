@@ -1,0 +1,115 @@
+.product-type{
+    font-size: 32px;
+    font-weight: $fw-m;
+    text-align: center;
+    padding: 24px 0;
+    border-left: 1px solid #DCDCDC;
+    border-right: 1px solid #DCDCDC;
+    position: relative;
+    &:hover::after{
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 8px;
+        background-color: $c-secondary;
+        top: 100%;
+        left: 0;
+        transform: translateY(-100%)
+    }
+    @include pad{
+        font-size: $fs-4;
+    }
+    @include mobile{
+        font-size: $fs-6;
+    }
+}
+.product-optical{
+    position: relative;
+    &::after{
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 8px;
+        background-color: $c-secondary;
+        top: 100%;
+        left: 0;
+        transform: translateY(-100%)
+    }
+}
+// banner-product
+.banner-product-page1, 
+.banner-product-page2{
+    width: 50%;
+    height: 296px;
+}
+.banner-product-page1{
+    background-image: url(/assets/images/product-header-1.png);
+    @include pad{
+        background-image: url(/assets/images/product-header-sm-1.png);
+    }
+}
+.banner-product-page2{
+    background-image: url(/assets/images/product-header-2.png);
+    @include pad{
+        background-image: url(/assets/images/product-header-sm-2.png);
+    }
+}
+// product-list
+.product-title-en{
+    font-size: 42px;
+    font-weight: $fw-m;
+    text-align: center;
+}
+.product-title{
+    margin-bottom: 32px;
+    @include mobile{
+        margin-bottom: 24px;
+    }
+}
+.product-title-cn{
+    font-size: 32px;
+    text-align: center;
+}
+.product-list{
+    gap: 80px 0;
+}
+.product-name{
+    font-size: $fs-4;
+    font-weight: $fw-m;
+}
+.price{
+    font-size: $fs-4;
+    font-weight: $fw-m;
+    color: #AA0601;
+}
+.color-box{
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    margin-right: 8px;
+}
+.page-nav{
+    margin-top: 80px;
+    border-bottom: 1px solid #555555;
+    border-top: 1px solid #555555;
+    &:last-child{
+        border-right: 1px solid #555555;
+    }
+}
+.page{
+    font-size: 18px;
+    color: #555555;
+    padding: 12px 15px;
+    border-left: 1px solid #555555;
+    &:hover{
+        background-color: #F2F2F2;
+    }
+    @include mobile{
+        font-size: $fs-5;
+        padding: 12px 15px;
+    }
+}
+.page2{
+    background-color: #000000;
+    color: #ffffff;
+}
